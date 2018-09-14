@@ -41,9 +41,12 @@
             <div class="control">
               <%= f.submit 'Sign up', class: 'button is-link' %>
             </div>
-            <div class="control">
-              <%= link_to 'Log in', new_session_path(resource_name), class: 'button is-light' %>
-            </div>
+
+            <%- if controller_name != 'sessions' %>
+              <div class="control">
+                <%= link_to 'Log in', new_session_path(resource_name), class: 'button is-light' %>
+              </div>
+            <% end -%>
           </div>
         <% end %>
       </div>

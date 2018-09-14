@@ -18,6 +18,14 @@
   <body>
     <%= yield %>
 
+    <% if user_signed_in? %>
+      <footer class="footer">
+        <div class="content has-text-centered">
+          <p>This project is maintained and funded by Nimbl3 Ltd.</p>
+        </div>
+      </footer>
+    <% end %>
+
     <div class="notification-container">
       <% if notice %>
         <div class="notification is-info">
